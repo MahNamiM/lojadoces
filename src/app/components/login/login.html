@@ -1,0 +1,23 @@
+<div class="container d-flex justify-content-center my-5">
+  <div class="card p-4 shadow-sm" style="max-width: 400px; width: 100%;">
+    <h3 class="text-center mb-4">Entrar</h3>
+
+    <div class="alert alert-danger py-2" *ngIf="erro">{{ erro }}</div>
+
+    <div class="mb-3">
+      <label for="email" class="form-label">E-mail</label>
+      <input id="email" type="email" class="form-control" [(ngModel)]="email">
+    </div>
+
+    <div class="mb-3">
+      <label for="senha" class="form-label">Senha</label>
+      <input id="senha" type="password" class="form-control" [(ngModel)]="senha">
+    </div>
+
+    <button class="btn btn-doce w-100" (click)="entrar()">Entrar</button>
+
+    <div class="text-center mt-3">
+      <a routerLink="/esqueci-senha">Esqueci minha senha</a>
+    </div>
+  </div>
+</div>
